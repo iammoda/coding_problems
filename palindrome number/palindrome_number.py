@@ -4,13 +4,13 @@ class Solution(object):
         :type x: int
         :rtype: bool
         """
-        rev = 0
-        copyX = x
-        while x>0:
-            rev = (rev*10) + (x%10)
-            x /= 10
-
-        if rev == copyX:
+        reverse = 0
+        number = x
+        while number > 0:
+            remainder = number % 10
+            reverse = (reverse*10) + remainder
+            number /= 10
+        if reverse == x:
             return True
         else:
             return False
